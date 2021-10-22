@@ -1,0 +1,12 @@
+name: context
+channels:
+  - anaconda
+  - conda-forge
+  - bioconda
+dependencies:
+  - Django
+  - djangorestframework
+  - django-cors-headers
+  - mysqlclient
+  - mod_wsgi
+  - django-filter
