@@ -10,3 +10,4 @@ dependencies:
   - mysqlclient
   - mod_wsgi
   - django-filter
+  - gunicorn
