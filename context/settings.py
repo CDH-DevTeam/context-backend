@@ -77,14 +77,16 @@ WSGI_APPLICATION = 'context.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'OPTIONS': {
-#             'read_default_file': BASE_DIR / 'riksdagstryck.cnf',
-#         },
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'riksdagstryck',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
@@ -144,8 +146,8 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-try:
-    from .settings_local import *
-except ImportError:
-    import sys
-    print("Local settings missing!", file=sys.stderr)
+# try:
+#     from .settings_local import *
+# except ImportError:
+#     import sys
+#     print("Local settings missing!", file=sys.stderr)
